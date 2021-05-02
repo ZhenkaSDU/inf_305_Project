@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 use App\Http\Controllers\TestController;
-Route::get('/data', [TestController::class, 'test']);
+use App\Http\Controllers\MemberController;
 
 Route::get('/index', function () {
     return view('index');
@@ -24,6 +24,10 @@ Route::get('/info', function(){
 Route::get('/data_edit', function(){
     return view('data_edit');
 });
+
+// Route::get('/something', [testController::class, 'sp']);
+
+// Route::get('/delete', [MemberController::class, 'list']);
 Route::get('/index/title', [TestController::class, 'test_title']);
 Route::get('/index/year', [TestController::class, 'test_year']);
 Route::get('/index/duration', [TestController::class, 'test_duration']);

@@ -17,7 +17,7 @@
         <div class="container container-fluid">
           <a class="navbar-brand">IvanFilms</a>
           <a class="btn btn-dark" href="{{url('info')}}" style="color: #c9d6df">Next Page</a>
-          <a class="btn btn-dark" href="{{url('info')}}" style="color: #c9d6df">Data edit</a>
+          <a class="btn btn-dark" href="{{url('data_edit')}}" style="color: #c9d6df">Data edit</a>
           <form class="d-flex">
             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
             <button class="btn btn-outline-success" type="submit">Search</button>
