@@ -16,7 +16,8 @@
     <nav class="navbar navbar-light bg-light">
         <div class="container container-fluid">
           <a class="navbar-brand">IvanFilms</a>
-          <a class="btn btn-dark" href="{{url('info')}}" style="color: #c9d6df">Next Page</a>
+          {{-- <a class="btn btn-dark" href="{{url('info')}}" style="color: #c9d6df\
+">Next Page</a> --}}
           <a class="btn btn-dark" href="{{url('data_edit')}}" style="color: #c9d6df">Data edit</a>
           <form class="d-flex">
             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
@@ -51,7 +52,7 @@
 
 
 
-    @foreach ($blog as $blogData)\
+    @foreach ($blog as $blogData)
         <div class="description container">
             <div class="first_div">
                 <h2>{{$blogData->title}}</h2>
