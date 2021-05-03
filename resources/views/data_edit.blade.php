@@ -27,8 +27,53 @@
     <style>
         body{
             background-color: #1e2022;
+        color:aliceblue;
         }
+        /* table th{
+            font: 2vw @important;
+        } */
     </style>
+
+
+<table class="table container table-dark">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Type</th>
+        <th scope="col">Title</th>
+        <th scope="col">Director</th>
+        <th scope="col">Cast</th>
+        <th scope="col">Country</th>
+        <th scope="col">Date Added</th>
+        <th scope="col">Release Year</th>
+        <th scope="col">Rating</th>
+        <th scope="col">Duration</th>
+        <th scope="col">Listed In</th>
+        <th scope="col">Delete</th>
+        <th scope="col">Update</th>
+      </tr>
+    </thead>
+    <tbody>
+        @foreach ($films as $item)
+            <tr>
+                <th scope="row">{{$item['show_id']}}</th>
+                <td>{{$item['type']}}</td>
+                <td>{{$item['title']}}</td>
+                <td>{{$item['director']}}</td>
+                <td>{{$item['cast']}}</td>
+                <td>{{$item['country']}}</td>
+                <td>{{$item['date_added']}}</td>
+                <td>{{$item['release_year']}}</td>
+                <td>{{$item['rating']}}</td>
+                <td>{{$item['duration']}}</td>
+                <td>{{$item['listed_in']}}</td>
+                <td><a href="{{"delete/".$item['show_id']}}" class="btn btn-danger">Delete</a></td>
+                <td><a href="{{"update/".$item['show_id']}}" class="btn btn-success">Update</a></td>
+            </tr>
+        @endforeach
+
+    </tbody>
+</table>
 
 
 

@@ -5,7 +5,9 @@ use Illuminate\Support\Facades\DB;
 class TestController extends Controller{
 
     public function sp(){
-        $blog = DB::select('select (exec welcome_msgJune)  from films f, country_flags c
+        $blog = DB::statement('
+
+        select (exec welcome_msgJune)  from films f, country_flags c
         where rownum <= 30 and cast is not null and f.country = c.country
         order by title
         asc');
